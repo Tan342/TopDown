@@ -6,6 +6,7 @@ public class SpawnEnemy : MonoBehaviour
 {
     [SerializeField] Transform[] spawnPoints;
     [SerializeField] GameObject[] enemyPrefab;
+    [SerializeField] GameObject posSpawn;
     [SerializeField] float timeSpawn = 2f;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,8 @@ public class SpawnEnemy : MonoBehaviour
     {
         int pos = Random.Range(0, spawnPoints.Length);
         int enemy = Random.Range(0, enemyPrefab.Length);
-        Instantiate(enemyPrefab[enemy], spawnPoints[pos].position, Quaternion.identity);
+        GameObject e = Instantiate(enemyPrefab[enemy], spawnPoints[pos].position, Quaternion.identity);
+        e.transform.parent = posSpawn.transform;
         yield return new WaitForSeconds(timeSpawn);
         StartCoroutine("Spawn");
     }

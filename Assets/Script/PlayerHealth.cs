@@ -48,8 +48,8 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator DeadHandler()
     {
-        Time.timeScale = 0;
         yield return new WaitForSeconds(1.5f);
+        Time.timeScale = 0;
         PlayerPrefs.SetInt("save",0);
         deadCanvasHandle.display();
     }

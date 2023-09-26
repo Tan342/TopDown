@@ -6,6 +6,7 @@ public class SpawnWeapon : MonoBehaviour
 {
     [SerializeField] Transform[] spawnPoints;
     [SerializeField] GameObject[] weaponPrefab;
+    [SerializeField] GameObject spawnPos;
     [SerializeField] float timeSpawn = 5f;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,8 @@ public class SpawnWeapon : MonoBehaviour
     {
         int pos = Random.Range(0, spawnPoints.Length);
         int weapon = Random.Range(0, weaponPrefab.Length);
-        Instantiate(weaponPrefab[weapon], spawnPoints[pos].position, Quaternion.identity);
+        GameObject e = Instantiate(weaponPrefab[weapon], spawnPoints[pos].position, Quaternion.identity);
+        e.transform.parent = spawnPos.transform;
         yield return new WaitForSeconds(timeSpawn);
         StartCoroutine("Spawn");
     }

@@ -208,6 +208,37 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!1 &121231632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 121231633}
+  m_Layer: 0
+  m_Name: WeaponSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &121231633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121231632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &131771411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1115,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ea28b102bd05d49bf15f740c8658ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &609701619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 609701620}
+  m_Layer: 0
+  m_Name: EnemySpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &609701620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609701619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &623884187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,6 +2547,7 @@ MonoBehaviour:
   weaponPrefab:
   - {fileID: 459763074636327702, guid: 414052b21d0160d488945b18b585f3b0, type: 3}
   - {fileID: 801028747286108688, guid: 6ea5bb82a7d57ee4c9533500c8eb95c0, type: 3}
+  spawnPos: {fileID: 121231632}
   timeSpawn: 5
 --- !u!4 &1263722265
 Transform:
@@ -3353,6 +3416,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 292807356396775681, guid: af50da2aa80c4a84dbd806e86146cf76, type: 3}
   - {fileID: 165220209445014998, guid: 4f2e4bad5a46fca45af88991a1e060fd, type: 3}
+  posSpawn: {fileID: 609701619}
   timeSpawn: 2
 --- !u!4 &1519778219
 Transform:
@@ -3479,7 +3543,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!1 &1563851164
 GameObject:
